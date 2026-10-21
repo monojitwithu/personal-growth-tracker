@@ -8,12 +8,10 @@ import '@fontsource-variable/inter';
 import '@fontsource-variable/jetbrains-mono';
 
 // PWA Service Worker Registration
-if ('serviceWorker' in navigator && import.meta.env.PROD) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch((err) => {
-      console.warn('Service worker registration failed:', err);
-    });
-  });
+import { registerSW } from 'virtual:pwa-register';
+
+if (import.meta.env.PROD) {
+  registerSW({ immediate: true });
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
