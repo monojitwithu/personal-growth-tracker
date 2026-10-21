@@ -79,3 +79,119 @@ export function generateId(prefix = 'log'): string {
       : Math.random().toString(36).slice(2, 10);
   return `${prefix}-${Date.now().toString(36)}-${rand}`;
 }
+
+export interface BacklogItem {
+  weekNumber: number;
+  weekTitle: string;
+  phase: string;
+  type: 'topic' | 'milestone';
+  title: string;
+}
+
+export interface ScheduleHealth {
+  status: 'on-track' | 'delayed' | 'ahead';
+  daysDelayed: number;
+  backlogTopicsCount: number;
+  backlogMilestonesCount: number;
+  backlogItems: BacklogItem[];
+  plannedTargetDate: string;
+  projectedTargetDate: string;
+  expectedCompletedWeeks: number;
+  actualCompletedWeeks: number;
+  completedTopicsCount: number;
+  totalTopicsCount: number;
+  summaryText: string;
+}
+
+export function computeScheduleHealth(weeks: WeekData[], today: string): ScheduleHealth {
+  const plannedTargetDate = weeks[weeks.length - 1]?.endDate ?? '2027-02-02';
+  const currentWeekNum = calendarWeekNumber(weeks, today);
+
+  const backlogItems: BacklogItem[] = [];
+  let backlogTopicsCount = 0;
+  let backlogMilestonesCount = 0;
+  let completedTopicsCount = 0;
+  let totalTopicsCount = 0;
+  let actualCompletedWeeks = 0;
+
+  for (const week of weeks) {
+    totalTopicsCount += week.topics.length;
+    const doneTopicsSet = new Set(week.completedTopics ?? []);
+    completedTopicsCount += doneTopicsSet.size;
+
+    const isPastWeek = week.endDate < today;
+    const isWeekFullyDone = week.isMilestoneCompleted && doneTopicsSet.size === week.topics.length;
+
+    if (isWeekFullyDone) {
+      actualCompletedWeeks += 1;
+    }
+
+    if (isPastWeek) {
+      for (const topic of week.topics) {
+        if (!doneTopicsSet.has(topic)) {
+          backlogTopicsCount += 1;
+          backlogItems.push({
+            weekNumber: week.weekNumber,
+            weekTitle: week.title,
+            phase: week.phase,
+            type: 'topic',
+            title: topic,
+          });
+        }
+      }
+
+      if (!week.isMilestoneCompleted) {
+        backlogMilestonesCount += 1;
+        backlogItems.push({
+          weekNumber: week.weekNumber,
+          weekTitle: week.title,
+          phase: week.phase,
+          type: 'milestone',
+          title: week.milestoneDeliverable,
+        });
+      }
+    }
+  }
+
+  const expectedCompletedWeeks = Math.max(0, currentWeekNum - 1);
+
+  let daysDelayed = 0;
+  let status: 'on-track' | 'delayed' | 'ahead' = 'on-track';
+
+  if (backlogItems.length > 0) {
+    daysDelayed = Math.max(
+      1,
+      Math.round(backlogMilestonesCount * 2.5 + backlogTopicsCount * 0.75),
+    );
+    status = 'delayed';
+  } else if (actualCompletedWeeks > expectedCompletedWeeks) {
+    status = 'ahead';
+  } else {
+    status = 'on-track';
+  }
+
+  const projectedTargetDate = daysDelayed > 0 ? addDays(plannedTargetDate, daysDelayed) : plannedTargetDate;
+
+  let summaryText = 'All past weekly objectives completed. You are on track!';
+  if (status === 'delayed') {
+    summaryText = `${backlogItems.length} backlog item${backlogItems.length === 1 ? '' : 's'} (${backlogTopicsCount} topic${backlogTopicsCount === 1 ? '' : 's'}, ${backlogMilestonesCount} milestone${backlogMilestonesCount === 1 ? '' : 's'}). Target estimated to slip by ${daysDelayed} day${daysDelayed === 1 ? '' : 's'}.`;
+  } else if (status === 'ahead') {
+    summaryText = `Pacing ahead of target timeline (${actualCompletedWeeks} of ${expectedCompletedWeeks} expected weeks finished).`;
+  }
+
+  return {
+    status,
+    daysDelayed,
+    backlogTopicsCount,
+    backlogMilestonesCount,
+    backlogItems,
+    plannedTargetDate,
+    projectedTargetDate,
+    expectedCompletedWeeks,
+    actualCompletedWeeks,
+    completedTopicsCount,
+    totalTopicsCount,
+    summaryText,
+  };
+}
+
