@@ -1,7 +1,8 @@
-import { Flame, Hourglass, MonitorDown, WifiOff } from 'lucide-react';
+import { Flame, Hourglass, MonitorDown, Moon, Sun, WifiOff } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { useOnlineStatus } from '../../hooks/useOnlineStatus';
 import { usePwaInstall } from '../../hooks/usePwaInstall';
+import { useTheme } from '../../hooks/useTheme';
 import { cn } from '../../lib/cn';
 import type { TabId } from '../../types';
 import { Button } from '../ui/Button';
@@ -18,6 +19,7 @@ export function Navbar({ activeTab, onTabChange }: NavbarProps) {
   const online = useOnlineStatus();
   const { canInstall, promptInstall } = usePwaInstall();
   const { toast } = useToast();
+  const { toggleTheme, isDark } = useTheme();
 
   async function handleInstall() {
     const accepted = await promptInstall();
@@ -76,6 +78,18 @@ export function Navbar({ activeTab, onTabChange }: NavbarProps) {
             <span className="font-mono font-semibold tabular-nums">{streak}</span>
             <span className="hidden sm:inline">day streak</span>
           </span>
+
+          {/* Light / Dark Mode Toggle */}
+          <button
+            type="button"
+            onClick={toggleTheme}
+            id="theme-toggle-btn"
+            className="flex items-center justify-center h-8 w-8 rounded-xl border border-white/10 bg-white/[0.04] text-slate-300 hover:text-white hover:bg-white/10 transition active:scale-95 cursor-pointer"
+            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {isDark ? <Sun className="h-4 w-4 text-warn-400" /> : <Moon className="h-4 w-4 text-tech-400" />}
+          </button>
 
           {canInstall && (
             <Button
