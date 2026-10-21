@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - master
+      - ultimate
   workflow_dispatch:
 
 permissions:
