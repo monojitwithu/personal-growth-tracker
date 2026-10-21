@@ -158,3 +158,142 @@
 @utility safe-bottom {
   padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
 }
+
+/* ─────────────────────────────────────────────────────────────
+   Light Mode Theme Adaptation & Surface Hierarchy
+   ───────────────────────────────────────────────────────────── */
+html.light {
+  color-scheme: light;
+  background: #f8fafc;
+}
+
+html.light body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  background-image:
+    radial-gradient(60rem 40rem at 10% -10%, rgb(2 132 199 / 0.08), transparent 60%),
+    radial-gradient(50rem 35rem at 100% 0%, rgb(16 185 129 / 0.06), transparent 60%),
+    radial-gradient(40rem 30rem at 50% 120%, rgb(245 158 11 / 0.04), transparent 60%);
+}
+
+html.light {
+  --color-ink-950: #f8fafc;
+  --color-ink-900: #f1f5f9;
+  --color-ink-850: #ffffff;
+  --color-ink-800: #e2e8f0;
+  --color-ink-700: #cbd5e1;
+}
+
+html.light .glass {
+  background-color: rgb(255 255 255 / 0.88) !important;
+  border-color: rgb(226 232 240 / 0.85) !important;
+  box-shadow:
+    0 1px 0 0 rgb(255 255 255 / 0.8) inset,
+    0 12px 28px -12px rgb(0 0 0 / 0.08) !important;
+}
+
+html.light header {
+  background-color: rgb(255 255 255 / 0.88) !important;
+  border-bottom-color: rgb(226 232 240 / 0.85) !important;
+}
+
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-100,
+html.light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.light .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.light .border-white\/10,
+html.light .border-white\/\[0\.08\],
+html.light .border-white\/\[0\.07\],
+html.light .border-white\/\[0\.06\],
+html.light .border-white\/15,
+html.light .border-white\/20,
+html.light .border-white\/25 {
+  border-color: rgb(226 232 240 / 0.9) !important;
+}
+
+html.light .bg-white\/\[0\.04\],
+html.light .bg-white\/\[0\.02\],
+html.light .bg-white\/5,
+html.light .bg-white\/\[0\.05\],
+html.light .bg-white\/\[0\.06\],
+html.light .bg-white\/10 {
+  background-color: rgb(241 245 249 / 0.95) !important;
+}
+
+html.light .hover\:bg-white\/10:hover,
+html.light .hover\:bg-white\/5:hover {
+  background-color: rgb(226 232 240 / 0.8) !important;
+}
+
+html.light .bg-ink-950\/70,
+html.light .bg-ink-950\/60,
+html.light .bg-ink-950\/80 {
+  background-color: rgb(255 255 255 / 0.95) !important;
+}
+
+html.light .field {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+html.light .field::placeholder {
+  color: #94a3b8 !important;
+}
+
+html.light input[type='date']::-webkit-calendar-picker-indicator {
+  filter: none !important;
+}
+
+html.light .bg-tech-500\/10,
+html.light .bg-tech-500\/15 {
+  background-color: rgb(2 132 199 / 0.12) !important;
+}
+
+html.light .text-tech-300,
+html.light .text-tech-400 {
+  color: #0284c7 !important;
+}
+
+html.light .border-tech-400\/30,
+html.light .border-tech-500\/20 {
+  border-color: rgb(2 132 199 / 0.35) !important;
+}
+
+html.light .text-growth-300,
+html.light .text-growth-400 {
+  color: #059669 !important;
+}
+
+html.light .text-warn-300,
+html.light .text-warn-400 {
+  color: #d97706 !important;
+}
+
+html.light .text-violet-300,
+html.light .text-violet-400 {
+  color: #7c3aed !important;
+}
+
+html.light .text-rose-300,
+html.light .text-rose-400 {
+  color: #e11d48 !important;
+}
+
