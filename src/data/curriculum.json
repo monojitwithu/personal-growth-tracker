@@ -1,0 +1,871 @@
+{
+  "curriculumVersion": "2.0.0",
+  "activeWeek": 1,
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "dateRange": "Oct 21 – Oct 27, 2026",
+      "startDate": "2026-10-21",
+      "endDate": "2026-10-27",
+      "phase": "Phase 1: JavaScript, React & Next.js Core Mastery",
+      "title": "JavaScript Engine Internals & Modern Async Architecture",
+      "topics": [
+        "V8 engine pipeline: Ignition bytecode interpreter & TurboFan JIT compiler optimization",
+        "Execution contexts, call stack, lexical environments, and closure heap memory retention",
+        "Browser event loop vs Node.js: Macrotasks, Microtasks (Promises/MutationObserver), and requestAnimationFrame",
+        "Object prototypes, prototype pollution mitigation, and ES6+ class internal mechanics",
+        "Memory lifecycle: Scavenge vs Mark-Sweep GC, detecting detached DOM tree leaks",
+        "Advanced TypeScript: Generics, conditional types, and template literal type inference"
+      ],
+      "milestoneDeliverable": "Interactive event-loop simulation visualizer with memory leak heap profiler and TypeScript utility library.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w1-opt1",
+          "title": "V8 Execution Context & Closure Memory Tracing",
+          "description": "Trace V8 call stack, lexical environment records, and closure memory heap retention in DevTools.",
+          "mode": "Mode B"
+        },
+        {
+          "id": "w1-opt2",
+          "title": "Browser Task Queue vs Microtask Tracing Harness",
+          "description": "Build a diagnostic harness demonstrating execution order of Promise microtasks, requestAnimationFrame, and setTimeout.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w1-opt3",
+          "title": "Prototypal Inheritance & Custom Polyfill Suite",
+          "description": "Implement manual prototype chain delegation, function bind polyfill, and inheritance without ES6 classes.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w1-opt4",
+          "title": "Custom Typed EventTarget & Observer System",
+          "description": "Build a high-performance typed event emitter supporting once, prepend, and automatic listener garbage collection.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w1-opt5",
+          "title": "Advanced TypeScript Type Gymnastics Benchmark",
+          "description": "Author complex generic types: DeepPartial, TupleToUnion, PathKeys, and schema inference helpers.",
+          "mode": "Mode A"
+        }
+      ]
+    },
+    {
+      "weekNumber": 2,
+      "dateRange": "Oct 28 – Nov 03, 2026",
+      "startDate": "2026-10-28",
+      "endDate": "2026-11-03",
+      "phase": "Phase 1: JavaScript, React & Next.js Core Mastery",
+      "title": "React 19 Core Internals & Advanced State Systems",
+      "topics": [
+        "React Fiber reconciliation architecture: Fiber tree, Work-In-Progress (WIP) tree, and double buffering",
+        "React 19 hooks mechanics: useTransition, useDeferredValue, useOptimistic, and useActionState",
+        "Hook dependencies, closures, and useLayoutEffect vs useEffect timing semantics",
+        "State architecture: Context modularization vs atomic Zustand stores with memoized selectors",
+        "React Compiler (Forget) mental model: memoization rules, reactivity boundaries, and compile targets",
+        "Custom hook design: abortable async effects, debounced fetch, and subscription lifecycle"
+      ],
+      "milestoneDeliverable": "Production-ready React 19 UI component suite with atomic Zustand state, optimistic mutations, and zero-re-render cascades.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w2-opt1",
+          "title": "React Fiber & Reconciliation Engine Deep Dive",
+          "description": "Study React 19 reconciliation, work units, double buffering, and fiber node tag structures.",
+          "mode": "Mode B"
+        },
+        {
+          "id": "w2-opt2",
+          "title": "Concurrent React: Non-Blocking Filter with useTransition",
+          "description": "Build a large dataset filter demonstrating fluid typing with useTransition and useDeferredValue.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w2-opt3",
+          "title": "Optimistic Mutations with React 19 useActionState",
+          "description": "Implement an optimistic task list with instant UI rollbacks on simulated API failure.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w2-opt4",
+          "title": "Zustand Store Architecture with Atomic Selectors",
+          "description": "Author a multi-slice Zustand store preventing unnecessary consumer component re-renders.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w2-opt5",
+          "title": "React Profiler & Render Cascade Elimination",
+          "description": "Profile expensive component trees in React DevTools; eliminate re-renders using refactored state and React.memo.",
+          "mode": "Mode A"
+        }
+      ]
+    },
+    {
+      "weekNumber": 3,
+      "dateRange": "Nov 04 – Nov 10, 2026",
+      "startDate": "2026-11-04",
+      "endDate": "2026-11-10",
+      "phase": "Phase 1: JavaScript, React & Next.js Core Mastery",
+      "title": "Next.js App Router Architecture & Server Actions",
+      "topics": [
+        "Next.js 15 App Router directory anatomy: layouts, templates, error boundaries, loading skeletons",
+        "Advanced routing topologies: Route Groups (group), Parallel Routes @slot, Intercepting Routes (.)",
+        "Server Actions: RPC wire protocol, progressive enhancement, form status & validation",
+        "Route Handlers (route.ts): Web Request/Response standard, streaming responses, cookies & headers",
+        "Edge Middleware: session token validation, path rewriting, geolocation routing, rate-limit headers",
+        "Next.js security best practices: CSRF mitigation for Server Actions and input sanitization"
+      ],
+      "milestoneDeliverable": "Modular Next.js 15 App Router portal with parallel/intercepting modal routes, authenticated middleware, and type-safe Server Actions.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w3-opt1",
+          "title": "App Router File-System Routing Anatomy Study",
+          "description": "Deconstruct App Router request lifecycles, nested layout persistence, and route group organizational patterns.",
+          "mode": "Mode B"
+        },
+        {
+          "id": "w3-opt2",
+          "title": "Parallel & Intercepting Modals Implementation",
+          "description": "Build an image feed modal using parallel slot @modal and intercepting route (.)photo with full URL shareability.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w3-opt3",
+          "title": "Type-Safe Server Actions with Zod Validation",
+          "description": "Implement progressive enhancement Server Actions using Zod input validation and RFC 7807 problem details.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w3-opt4",
+          "title": "Edge Middleware Authentication & Path Rewriting",
+          "description": "Author Edge middleware verifying signed JWT cookies and conditionally rewriting requests to tenant subdomains.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w3-opt5",
+          "title": "High-Throughput Next.js Route Handlers",
+          "description": "Build streaming API Route Handlers returning NDJSON data chunks with custom cache headers and abort signal handling.",
+          "mode": "Mode A"
+        }
+      ]
+    },
+    {
+      "weekNumber": 4,
+      "dateRange": "Nov 11 – Nov 17, 2026",
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-17",
+      "phase": "Phase 2: Modern Rendering Architectures & Runtime Execution",
+      "title": "Core Web Rendering Paradigms: CSR, SSR, SSG & On-Demand ISR",
+      "topics": [
+        "Client-Side Rendering (CSR): SPA bundle parsing, FCP vs TTI latency, SEO indexing limits",
+        "Server-Side Rendering (SSR) per request: server compute costs, dynamic HTML streaming, TTFB",
+        "Static Site Generation (SSG): pre-rendering at build time, generateStaticParams, Edge CDN distribution",
+        "Incremental Static Regeneration (ISR): Time-based revalidation (revalidate) vs On-Demand Tag Revalidation",
+        "Next.js Data Cache & Request Memoization: fetch cache policies, revalidateTag, and revalidatePath",
+        "HTTP caching directives: Cache-Control, stale-while-revalidate, surrogate keys, and edge invalidation"
+      ],
+      "milestoneDeliverable": "Multi-mode rendering benchmark lab comparing CSR, SSR, SSG, and On-Demand ISR with Lighthouse performance metrics.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w4-opt1",
+          "title": "Rendering Strategy Decision Matrix Study",
+          "description": "Evaluate CSR vs SSR vs SSG vs ISR trade-offs across SEO, freshness, server compute costs, and global latency.",
+          "mode": "Mode B"
+        },
+        {
+          "id": "w4-opt2",
+          "title": "On-Demand ISR Pipeline with revalidateTag",
+          "description": "Build an e-commerce catalog page revalidating instantaneously via webhook-triggered revalidateTag calls.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w4-opt3",
+          "title": "Dynamic SSR Route with Edge Caching",
+          "description": "Create dynamic personalized dashboard route utilizing Next.js dynamic rendering with stale-while-revalidate headers.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w4-opt4",
+          "title": "Static Catalog Generation with generateStaticParams",
+          "description": "Pre-render 1,000 product pages at build time with generateStaticParams and dynamicParams fallback handling.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w4-opt5",
+          "title": "CDN Cache-Control & SWR Benchmark",
+          "description": "Measure TTFB and cache hit ratio between origin server and CDN edge using custom Cache-Control headers.",
+          "mode": "Mode A"
+        }
+      ]
+    },
+    {
+      "weekNumber": 5,
+      "dateRange": "Nov 18 – Nov 24, 2026",
+      "startDate": "2026-11-18",
+      "endDate": "2026-11-24",
+      "phase": "Phase 2: Modern Rendering Architectures & Runtime Execution",
+      "title": "React Server Components (RSC), Streaming SSR & Partial Prerendering (PPR)",
+      "topics": [
+        "React Server Components (RSC) architecture: zero-bundle weight, server/client boundary mechanics",
+        "The RSC Flight Wire Protocol: serialization format, flight data payloads, streaming component trees",
+        "Progressive HTML Streaming: React Suspense boundaries, chunked HTTP transfer encoding, prioritized hydration",
+        "Selective Hydration: prioritized hydration of user-interacted DOM nodes without blocking main thread",
+        "Partial Prerendering (PPR): instant static shell generation with dynamic streaming islands in a single HTTP response",
+        "Edge Runtime vs Node.js Serverless: V8 isolates vs container runtimes, cold starts, and API limitations",
+        "Hydration error diagnosis: identifying and eliminating server HTML vs client DOM divergence bugs"
+      ],
+      "milestoneDeliverable": "Production Next.js RSC dashboard with Partial Prerendering (PPR), nested Suspense streaming, and zero hydration warnings.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w5-opt1",
+          "title": "RSC Wire Protocol & Flight Payload Inspection",
+          "description": "Inspect raw RSC wire protocol payloads in Network tab; analyze props serialization and client reference manifests.",
+          "mode": "Mode B"
+        },
+        {
+          "id": "w5-opt2",
+          "title": "Progressive Streaming SSR with Multi-Tier Suspense",
+          "description": "Build a complex dashboard streaming slow widgets independently via nested React Suspense boundaries.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w5-opt3",
+          "title": "Next.js Partial Prerendering (PPR) Configuration",
+          "description": "Enable experimental PPR; author hybrid page serving static shell instantly with dynamic streaming holes.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w5-opt4",
+          "title": "Edge Runtime vs Node.js Performance Comparison",
+          "description": "Deploy identical rendering routes to Edge Runtime and Node.js runtime; measure cold starts and memory footprints.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w5-opt5",
+          "title": "Hydration Mismatch Debugger & Remediation",
+          "description": "Create test cases inducing browser extension / timestamp hydration bugs and implement resilient fixes.",
+          "mode": "Mode A"
+        }
+      ]
+    },
+    {
+      "weekNumber": 6,
+      "dateRange": "Nov 25 – Dec 01, 2026",
+      "startDate": "2026-11-25",
+      "endDate": "2026-12-01",
+      "phase": "Phase 3: Backend & Relational Data Mastery",
+      "title": "Node.js Architecture & High-Throughput APIs",
+      "topics": [
+        "Libuv event loop phases (Timers, Poll, Check, Close)",
+        "Microtasks (process.nextTick vs Promise.then)",
+        "Node.js stream.pipeline & backpressure handling",
+        "Worker Threads & Cluster module for CPU scaling",
+        "Fastify framework with JSON schema validation",
+        "Centralized operational vs programmer error handling"
+      ],
+      "milestoneDeliverable": "Production Fastify REST API with custom streams pipeline and full validation schemas.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w6-opt1",
+          "title": "Event Loop Deep-Dive & Microtask Tracing",
+          "description": "Trace event loop execution order comparing process.nextTick, setImmediate, and Promise microtasks.",
+          "mode": "Mode B"
+        },
+        {
+          "id": "w6-opt2",
+          "title": "Fastify Production REST API Setup",
+          "description": "Initialize TypeScript Fastify API with Ajv request schema validation, Pino logging, and CORS.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w6-opt3",
+          "title": "Node.js Stream Pipeline with Backpressure",
+          "description": "Build a custom Transform stream reading large CSV payloads without exceeding Node memory thresholds.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w6-opt4",
+          "title": "Centralized Error Handling Architecture",
+          "description": "Implement middleware differentiating operational errors (4xx) from fatal crashes with RFC 7807 formatting.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w6-opt5",
+          "title": "Autocannon Throughput Benchmarking",
+          "description": "Run HTTP load tests comparing Express vs Fastify requests per second and memory footprint.",
+          "mode": "Mode A"
+        }
+      ]
+    },
+    {
+      "weekNumber": 7,
+      "dateRange": "Dec 02 – Dec 08, 2026",
+      "startDate": "2026-12-02",
+      "endDate": "2026-12-08",
+      "phase": "Phase 3: Backend & Relational Data Mastery",
+      "title": "PostgreSQL Schema Design & Index Tuning",
+      "topics": [
+        "Postgres MVCC, WAL, and PgBouncer connection pooling",
+        "Relational schema normalization (1NF–3NF) vs denormalization",
+        "B-tree, composite, and GIN JSONB indexing strategies",
+        "Execution plan diagnosis via EXPLAIN (ANALYZE, BUFFERS)",
+        "ACID transactions & isolation levels (Read Committed to Serializable)",
+        "Pessimistic (SELECT FOR UPDATE) vs Optimistic locking"
+      ],
+      "milestoneDeliverable": "Postgres database schema migration suite with EXPLAIN query optimization benchmark report.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w7-opt1",
+          "title": "Normalized E-Commerce Schema Design",
+          "description": "Model 3NF schema for users, orders, and products with appropriate foreign keys and cascade rules.",
+          "mode": "Mode C"
+        },
+        {
+          "id": "w7-opt2",
+          "title": "Local Postgres & 1M Dummy Record Seeding",
+          "description": "Set up local Postgres container and seed 1 million records using generate_series for benchmarking.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w7-opt3",
+          "title": "Query Plan Dissection with EXPLAIN ANALYZE",
+          "description": "Profile slow unindexed queries, create composite B-tree indexes, and verify buffer cache hits.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w7-opt4",
+          "title": "Transaction Isolation Level Experimentation",
+          "description": "Write concurrent scripts demonstrating Dirty Reads prevention and Repeatable Read serialization anomalies.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w7-opt5",
+          "title": "Optimistic Locking with Version Columns",
+          "description": "Implement concurrency control resolving conflicting simultaneous inventory decrement operations.",
+          "mode": "Mode A"
+        }
+      ]
+    },
+    {
+      "weekNumber": 8,
+      "dateRange": "Dec 09 – Dec 15, 2026",
+      "startDate": "2026-12-09",
+      "endDate": "2026-12-15",
+      "phase": "Phase 3: Backend & Relational Data Mastery",
+      "title": "Redis Caching Topologies & NoSQL Architecture",
+      "topics": [
+        "Redis memory architecture, primitives, and eviction policies (LRU)",
+        "Cache-Aside (Lazy Loading) vs Write-Through patterns",
+        "Sliding-window rate limiting using Redis Sorted Sets",
+        "Mitigating Cache Stampede via distributed mutex locks",
+        "Document stores (MongoDB) vs Relational JSONB trade-offs"
+      ],
+      "milestoneDeliverable": "High-throughput caching layer with sliding-window rate limiter and session storage module.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w8-opt1",
+          "title": "Redis Primitives & Eviction Deep-Dive",
+          "description": "Study Redis data structures (Strings, Hashes, Sorted Sets) and memory eviction configuration.",
+          "mode": "Mode B"
+        },
+        {
+          "id": "w8-opt2",
+          "title": "Cache-Aside Wrapper Module Implementation",
+          "description": "Build a reusable TypeScript caching utility with automated TTL, serialization, and fallback.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w8-opt3",
+          "title": "Sliding-Window Rate Limiter with Sorted Sets",
+          "description": "Implement a high-throughput API rate limiter using ZADD, ZREMRANGEBYSCORE, and ZCARD.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w8-opt4",
+          "title": "Cache Stampede Simulation & Mutex Fix",
+          "description": "Simulate high-concurrency cache miss spike and resolve it using distributed Redlock / mutex.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w8-opt5",
+          "title": "MongoDB vs Postgres JSONB Benchmark",
+          "description": "Compare query performance, indexing, and schema flexibility between MongoDB and Postgres JSONB.",
+          "mode": "Mode B"
+        }
+      ]
+    },
+    {
+      "weekNumber": 9,
+      "dateRange": "Dec 16 – Dec 22, 2026",
+      "startDate": "2026-12-16",
+      "endDate": "2026-12-22",
+      "phase": "Phase 4: Cloud Infrastructure, Docker & CI/CD",
+      "title": "Docker Containerization & Local Microservices",
+      "topics": [
+        "Multi-stage Docker builds for Node.js and Next.js standalone",
+        "Layer caching optimization and minimal Alpine / Distroless images",
+        "Container security: non-root users (USER node) and Trivy scans",
+        "Docker Compose multi-service topologies (App + DB + Redis + Nginx)",
+        "Environment variables and secret handling in containers"
+      ],
+      "milestoneDeliverable": "Multi-service Docker Compose environment with container security scanning report (Trivy).",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w9-opt1",
+          "title": "Multi-Stage Dockerfile for Fastify Backend",
+          "description": "Write hardened production Dockerfile with build stage, pruned node_modules, and non-root execution.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w9-opt2",
+          "title": "Next.js Production Standalone Dockerfile",
+          "description": "Configure next.config.js standalone output and author minimal container image under 120MB.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w9-opt3",
+          "title": "Full-Stack Docker Compose Orchestration",
+          "description": "Create docker-compose.yml linking Frontend, Backend, PostgreSQL, and Redis with healthchecks.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w9-opt4",
+          "title": "Container Security Scanning with Trivy",
+          "description": "Run Trivy vulnerability scans on images; resolve critical CVEs and strip unnecessary package managers.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w9-opt5",
+          "title": "Container Startup & Layer Caching Benchmark",
+          "description": "Analyze Docker build cache hit rates and measure cold startup performance across image variants.",
+          "mode": "Mode B"
+        }
+      ]
+    },
+    {
+      "weekNumber": 10,
+      "dateRange": "Dec 23 – Dec 29, 2026",
+      "startDate": "2026-12-23",
+      "endDate": "2026-12-29",
+      "phase": "Phase 4: Cloud Infrastructure, Docker & CI/CD",
+      "title": "Google Cloud Platform (GCP) & Cloud Run",
+      "topics": [
+        "GCP Core: Cloud Run (serverless containers), Cloud SQL (Postgres)",
+        "Serverless VPC Access connectors for private database peering",
+        "Cloud Storage buckets for scalable asset persistence",
+        "IAM Principle of Least Privilege & Service Account permissions",
+        "GCP Secret Manager for environment credentials"
+      ],
+      "milestoneDeliverable": "Live Cloud Run microservice securely communicating with private Cloud SQL over internal VPC.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w10-opt1",
+          "title": "GCP Project Setup & gcloud CLI Configuration",
+          "description": "Configure GCP account, set up gcloud CLI, create custom service accounts, and assign least privilege.",
+          "mode": "Mode B"
+        },
+        {
+          "id": "w10-opt2",
+          "title": "Cloud SQL Postgres Provisioning & VPC Peering",
+          "description": "Provision private Cloud SQL instance, configure internal VPC peering, and verify private IP access.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w10-opt3",
+          "title": "Deploying Container to Google Cloud Run",
+          "description": "Build and push Docker image to Google Artifact Registry and deploy to Cloud Run with memory limits.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w10-opt4",
+          "title": "Serverless VPC Access Connector Wiring",
+          "description": "Create Serverless VPC connector enabling Cloud Run to query private Cloud SQL without public IP.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w10-opt5",
+          "title": "Cloud Run Auto-Scaling Verification",
+          "description": "Simulate concurrent request bursts and observe Cloud Run autoscaling instance spin-up latency.",
+          "mode": "Mode A"
+        }
+      ]
+    },
+    {
+      "weekNumber": 11,
+      "dateRange": "Dec 30, 2026 – Jan 05, 2027",
+      "startDate": "2026-12-30",
+      "endDate": "2027-01-05",
+      "phase": "Phase 4: Cloud Infrastructure, Docker & CI/CD",
+      "title": "CI/CD Automation & Cloud Security Governance",
+      "topics": [
+        "Automated testing & linting with GitHub Actions and Cloud Build",
+        "Automated Docker build, scan, and push to Artifact Registry",
+        "Automated zero-downtime rolling deployment to Cloud Run",
+        "GCP Secret Manager integration with Cloud Run environment",
+        "Cloud Armor WAF rules and DDoS protection concepts"
+      ],
+      "milestoneDeliverable": "End-to-end automated CI/CD pipeline achieving automated zero-downtime deployment on git push.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w11-opt1",
+          "title": "GitHub Actions Linting & Testing Pipeline",
+          "description": "Author GitHub Actions workflow executing ESLint, TypeScript compilation, and Jest integration tests.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w11-opt2",
+          "title": "Automated Container Build & Artifact Registry Push",
+          "description": "Configure automated Docker build stage with Workload Identity Federation for keyless GCP auth.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w11-opt3",
+          "title": "Cloud Build / GitHub Actions Cloud Run Deployment",
+          "description": "Automate deployment step targeting Cloud Run on merge to main with automated rollback on failure.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w11-opt4",
+          "title": "Secret Manager Integration & Zero Hardcoded Secrets",
+          "description": "Store database credentials in GCP Secret Manager and mount them securely as env vars in Cloud Run.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w11-opt5",
+          "title": "Zero-Downtime Deployment Verification",
+          "description": "Send continuous traffic during deployment to prove zero dropped connections during container swap.",
+          "mode": "Mode A"
+        }
+      ]
+    },
+    {
+      "weekNumber": 12,
+      "dateRange": "Jan 06 – Jan 12, 2027",
+      "startDate": "2027-01-06",
+      "endDate": "2027-01-12",
+      "phase": "Phase 5: Scalable System Design & Architecture Docs",
+      "title": "Distributed System Design & High Scalability",
+      "topics": [
+        "Stateless service tiers, horizontal autoscaling, session externalization",
+        "Layer 4 vs Layer 7 Load Balancers and Cloud CDN edge caching",
+        "Google Cloud Pub/Sub asynchronous messaging & Dead-Letter Queues",
+        "Circuit Breaker pattern, rate limiting, and exponential backoff with jitter",
+        "CAP Theorem, PACELC, read replicas, and database sharding"
+      ],
+      "milestoneDeliverable": "System Architecture Design Document (SDD) for a 100k QPS event-driven platform.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w12-opt1",
+          "title": "Distributed System Scaling Concepts Study",
+          "description": "Study CAP Theorem trade-offs, PACELC, consistent hashing, and horizontal database sharding patterns.",
+          "mode": "Mode B"
+        },
+        {
+          "id": "w12-opt2",
+          "title": "Cloud Pub/Sub Asynchronous Pipeline Implementation",
+          "description": "Build producer and consumer services using Google Cloud Pub/Sub with dead-letter queue handling.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w12-opt3",
+          "title": "Resilient Retry Utility with Exponential Backoff & Jitter",
+          "description": "Implement production TypeScript retry helper preventing retry storms during downstream outages.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w12-opt4",
+          "title": "Circuit Breaker Pattern with Opossum",
+          "description": "Integrate Opossum circuit breaker wrapping database calls with automated fallback states.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w12-opt5",
+          "title": "System Design Document (SDD) Authoring",
+          "description": "Draft comprehensive architectural spec for a high-throughput event platform handling 100k QPS.",
+          "mode": "Mode C"
+        }
+      ]
+    },
+    {
+      "weekNumber": 13,
+      "dateRange": "Jan 13 – Jan 19, 2027",
+      "startDate": "2027-01-13",
+      "endDate": "2027-01-19",
+      "phase": "Phase 5: Scalable System Design & Architecture Docs",
+      "title": "Technical Architecture Documentation Mastery",
+      "topics": [
+        "UML & Mermaid.js sequence diagrams for distributed workflows",
+        "Contract-first OpenAPI 3.0 / Swagger schema authoring",
+        "RFC 7807 Problem Details standardized error formatting",
+        "Entity-Relationship Diagrams (ERDs) and Data Dictionaries",
+        "Enterprise Architectural Decision Records (ADRs) and RFCs"
+      ],
+      "milestoneDeliverable": "Full architectural documentation package (Sequence diagram, OpenAPI 3.0 spec, and ADR) for Capstone.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w13-opt1",
+          "title": "Mermaid.js Sequence Diagram Modeling",
+          "description": "Author detailed Mermaid sequence diagram modeling distributed authentication and asynchronous payment flows.",
+          "mode": "Mode C"
+        },
+        {
+          "id": "w13-opt2",
+          "title": "Contract-First OpenAPI 3.0 Specification",
+          "description": "Write complete OpenAPI 3.0 YAML spec for Capstone API including request schemas and RFC 7807 errors.",
+          "mode": "Mode C"
+        },
+        {
+          "id": "w13-opt3",
+          "title": "Database ERD & Data Dictionary Creation",
+          "description": "Generate visual ER diagram using Prisma Studio / dbdocs.io and document all table constraints and indexes.",
+          "mode": "Mode C"
+        },
+        {
+          "id": "w13-opt4",
+          "title": "Enterprise Architectural Decision Record (ADR)",
+          "description": "Author formal ADR evaluating Fastify vs Express and Cloud Run vs GKE with pros/cons matrix.",
+          "mode": "Mode C"
+        },
+        {
+          "id": "w13-opt5",
+          "title": "Architecture Review & Contract Verification",
+          "description": "Validate OpenAPI spec against live server implementation using spectral linter and contract testing.",
+          "mode": "Mode B"
+        }
+      ]
+    },
+    {
+      "weekNumber": 14,
+      "dateRange": "Jan 20 – Jan 26, 2027",
+      "startDate": "2027-01-20",
+      "endDate": "2027-01-26",
+      "phase": "Phase 6: Web Performance & Profiling",
+      "title": "Advanced Frontend DevTools & Bundle Optimization",
+      "topics": [
+        "Chrome DevTools Network tab waterfall dissection (TTFB, compression, HTTP/2)",
+        "DevTools Performance CPU profiling, flame charts, Long Tasks (>50ms)",
+        "Memory Tab Heap Snapshots: finding detached DOM nodes and memory leaks",
+        "Next.js @next/bundle-analyzer and route-based chunk splitting",
+        "Core Web Vitals (LCP < 2.5s, INP < 200ms, CLS < 0.1) optimization"
+      ],
+      "milestoneDeliverable": "Comprehensive Website Performance Audit Report with 40%+ bundle reduction and Lighthouse 95+ score.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w14-opt1",
+          "title": "Next.js Bundle Analyzer Audit",
+          "description": "Set up @next/bundle-analyzer, identify duplicate dependencies, and eliminate bloated vendor chunks.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w14-opt2",
+          "title": "Network Waterfall Dissection & TTFB Tuning",
+          "description": "Analyze DevTools Network waterfall: verify Brotli compression, preload fonts/hero images, and audit third-party tags.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w14-opt3",
+          "title": "Performance CPU Profiling & Long Task Removal",
+          "description": "Record DevTools CPU profile, identify Main Thread blocking scripts (>50ms), and optimize component reflows.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w14-opt4",
+          "title": "Memory Heap Snapshot & Leak Detection",
+          "description": "Capture baseline vs action Heap Snapshots in DevTools; identify and eliminate detached DOM memory leaks.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w14-opt5",
+          "title": "Dynamic Chunk Splitting & CWV Verification",
+          "description": "Implement next/dynamic on heavy modals/charts, run Lighthouse CI, and verify Core Web Vitals thresholds.",
+          "mode": "Mode A"
+        }
+      ]
+    },
+    {
+      "weekNumber": 15,
+      "dateRange": "Jan 27 – Feb 02, 2027",
+      "startDate": "2027-01-27",
+      "endDate": "2027-02-02",
+      "phase": "Phase 7: Capstone Integration & Leadership Launch",
+      "title": "Full-Stack Capstone Integration & EM/PM Pitch",
+      "topics": [
+        "End-to-end integration: Next.js + Node.js + Redis + Cloud SQL on GCP",
+        "Production monitoring: Google Cloud Logging & Monitoring dashboards",
+        "DORA metrics tracking (Deployment Frequency, Lead Time, Failure Rate, MTTR)",
+        "Technical PRD authoring and cross-functional leadership roadmap",
+        "Senior Full-Stack & Engineering Management portfolio presentation"
+      ],
+      "milestoneDeliverable": "Deployed, production-grade Full-Stack Capstone application with complete portfolio & pitch deck.",
+      "isMilestoneCompleted": false,
+      "dailyOptions": [
+        {
+          "id": "w15-opt1",
+          "title": "End-to-End Capstone Production Wiring",
+          "description": "Connect Next.js frontend to deployed GCP Cloud Run API; test complete data flow and error states.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w15-opt2",
+          "title": "GCP Observability Dashboard & SLI Alerts",
+          "description": "Configure Cloud Monitoring dashboard tracking p95/p99 latency, error rates, and container memory.",
+          "mode": "Mode A"
+        },
+        {
+          "id": "w15-opt3",
+          "title": "DORA Delivery Metrics Measurement",
+          "description": "Calculate team deployment frequency and lead time for changes using GitHub Actions deployment logs.",
+          "mode": "Mode C"
+        },
+        {
+          "id": "w15-opt4",
+          "title": "Technical PRD & Product Leadership Spec",
+          "description": "Draft a Technical PRD showing how to evolve the system for 10x traffic, modeling feature trade-offs.",
+          "mode": "Mode C"
+        },
+        {
+          "id": "w15-opt5",
+          "title": "5-Minute Architecture Walkthrough Recording",
+          "description": "Record high-impact video walkthrough presenting system architecture, sequence diagrams, and live demo.",
+          "mode": "Mode C"
+        }
+      ]
+    }
+  ],
+  "capstones": [
+    {
+      "id": "cap-1",
+      "title": "High-Throughput Distributed URL Shortener & Analytics Platform",
+      "stack": ["Node.js (Fastify)", "PostgreSQL", "Redis", "Docker Compose"],
+      "description": "Distributed URL shortening service featuring sub-5ms Redis Cache-Aside link resolution, PostgreSQL persistence with B-tree indexing on short hashes, and async click analytics counter.",
+      "deliverables": [
+        { "id": "c1-d1", "text": "Base62 encoding logic with collision handling", "done": false },
+        { "id": "c1-d2", "text": "Redis Cache-Aside with cache stampede prevention", "done": false },
+        { "id": "c1-d3", "text": "PostgreSQL schema with B-tree index on short_hash", "done": false },
+        { "id": "c1-d4", "text": "EXPLAIN ANALYZE benchmark proving index scan under 2ms", "done": false },
+        { "id": "c1-d5", "text": "Multi-stage Dockerfile and Docker Compose environment", "done": false }
+      ]
+    },
+    {
+      "id": "cap-2",
+      "title": "Enterprise Event-Driven Microservices Platform & Next.js Analytics Dashboard",
+      "stack": ["Next.js 15 (App Router)", "Node.js", "Google Cloud Run", "Cloud SQL", "Cloud Pub/Sub", "Redis"],
+      "description": "High-concurrency event ingestion platform with Cloud Pub/Sub queue worker, private Cloud SQL via Serverless VPC Access, and Next.js streaming RSC dashboard scoring 95+ on Lighthouse.",
+      "deliverables": [
+        { "id": "c2-d1", "text": "Cloud Run event ingestion API with rate limiting", "done": false },
+        { "id": "c2-d2", "text": "Google Cloud Pub/Sub worker service with Dead-Letter Queue", "done": false },
+        { "id": "c2-d3", "text": "Private Cloud SQL connection via Serverless VPC Access", "done": false },
+        { "id": "c2-d4", "text": "Mermaid.js sequence diagrams & contract-first OpenAPI 3.0 spec", "done": false },
+        { "id": "c2-d5", "text": "Next.js App Router dashboard with 95+ Lighthouse CWV score", "done": false },
+        { "id": "c2-d6", "text": "Automated CI/CD pipeline deploying zero-downtime to Cloud Run", "done": false }
+      ]
+    },
+    {
+      "id": "cap-3",
+      "title": "High-Performance Multi-Tenant E-Commerce Portal with Modern Rendering",
+      "stack": ["Next.js 15 (App Router)", "React 19", "Zustand", "TypeScript", "Tailwind CSS", "Redis Edge Cache"],
+      "description": "Omnichannel e-commerce portal implementing hybrid rendering (SSG marketing, On-Demand ISR product catalog with revalidateTag, and dynamic streaming RSC cart checkout) with sub-1.2s LCP.",
+      "deliverables": [
+        { "id": "c3-d1", "text": "Hybrid SSG & On-Demand ISR catalog with webhook revalidateTag", "done": false },
+        { "id": "c3-d2", "text": "Partial Prerendering (PPR) instant shell with streaming Suspense", "done": false },
+        { "id": "c3-d3", "text": "Type-safe Server Actions with Zod validation & optimistic cart mutations", "done": false },
+        { "id": "c3-d4", "text": "Atomic Zustand state slices eliminating unnecessary re-renders", "done": false },
+        { "id": "c3-d5", "text": "Lighthouse 98+ Core Web Vitals audit with zero hydration mismatch", "done": false }
+      ]
+    }
+  ],
+  "competencies": [
+    {
+      "id": "comp-js",
+      "title": "JavaScript & Engine Internals (V8)",
+      "benchmark": "Understands V8 compilation pipeline (Ignition & TurboFan); analyzes execution contexts, lexical scoping, closures, prototype delegation, and browser event loop microtask vs macrotask execution.",
+      "status": "In Progress"
+    },
+    {
+      "id": "comp-react",
+      "title": "React 19 Architecture & State Systems",
+      "benchmark": "Masters React Fiber reconciliation, double buffering, concurrent transitions (useTransition, useDeferredValue), React 19 Action states, and architecting zero-cascade atomic Zustand state slices.",
+      "status": "In Progress"
+    },
+    {
+      "id": "comp-next",
+      "title": "Next.js App Router & Full-Stack Capabilities",
+      "benchmark": "Designs file-system routing layouts, nested templates, parallel & intercepting modal routes; authors type-safe Server Actions with Zod and robust edge middleware.",
+      "status": "In Progress"
+    },
+    {
+      "id": "comp-rendering",
+      "title": "Modern Web Rendering Architectures",
+      "benchmark": "Articulates trade-offs across CSR, SSR, SSG, and On-Demand ISR; designs React Server Component (RSC) flight pipelines, progressive Suspense streaming, and Partial Prerendering (PPR).",
+      "status": "Not Started"
+    },
+    {
+      "id": "comp-1",
+      "title": "Backend Systems Engineering (Node.js)",
+      "benchmark": "Can articulate Libuv event loop phases from memory; writes resilient async stream pipelines with backpressure; structures production Fastify/Express APIs with schema validation and operational error handling.",
+      "status": "Not Started"
+    },
+    {
+      "id": "comp-2",
+      "title": "Database Design & Query Profiling (Postgres)",
+      "benchmark": "Designs normalized schemas (1NF-3NF); analyzes EXPLAIN (ANALYZE, BUFFERS) query plans; resolves N+1 query loops; selects correct index types; writes ACID transactions with locking semantics.",
+      "status": "Not Started"
+    },
+    {
+      "id": "comp-3",
+      "title": "Caching & In-Memory Architecture (Redis)",
+      "benchmark": "Implements Cache-Aside and Write-Through patterns in Redis; selects appropriate data types (Strings, Hashes, Sorted Sets); configures TTL and LRU policies; mitigates cache stampedes.",
+      "status": "Not Started"
+    },
+    {
+      "id": "comp-4",
+      "title": "Containerization & Cloud Infrastructure (GCP)",
+      "benchmark": "Authors secure, multi-stage non-root Dockerfiles; deploys serverless microservices to GCP Cloud Run; configures VPC private peering to Cloud SQL; manages IAM least privilege and secrets.",
+      "status": "Not Started"
+    },
+    {
+      "id": "comp-5",
+      "title": "CI/CD & DevOps Automation",
+      "benchmark": "Constructs automated CI/CD pipelines in GitHub Actions / Cloud Build; enforces automated testing and security container scanning; executes zero-downtime rolling deployments.",
+      "status": "Not Started"
+    },
+    {
+      "id": "comp-6",
+      "title": "Scalable System Design",
+      "benchmark": "Designs horizontally scalable, stateless application tiers; incorporates message queues (Pub/Sub) for async decoupling; implements Circuit Breaker and rate limiting resilience patterns.",
+      "status": "Not Started"
+    },
+    {
+      "id": "comp-7",
+      "title": "Technical Documentation Mastery",
+      "benchmark": "Models complex distributed workflows in Mermaid.js sequence diagrams; writes contract-first OpenAPI 3.0 specifications; authors formal Enterprise Architectural Decision Records (ADRs).",
+      "status": "Not Started"
+    },
+    {
+      "id": "comp-8",
+      "title": "Frontend Performance & DevTools Profiling",
+      "benchmark": "Dissects Network tab waterfalls; diagnoses Long Tasks (>50ms) in Performance flame charts; tracks down memory leaks in Heap Snapshots; optimizes Next.js bundle chunks and Core Web Vitals.",
+      "status": "Not Started"
+    },
+    {
+      "id": "comp-9",
+      "title": "Engineering Leadership (EM / PM Trajectory)",
+      "benchmark": "Tracks team delivery via DORA metrics; defines SLIs/SLOs/SLAs; translates PRDs into robust technical architecture specifications; effectively mentors junior engineers and facilitates postmortems.",
+      "status": "Not Started"
+    }
+  ]
+}

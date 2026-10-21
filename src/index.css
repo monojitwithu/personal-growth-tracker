@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+
+/* ─────────────────────────────────────────────────────────────
+   Design tokens — Linear / Vercel-inspired dark palette
+   Deep Navy #0F172A · Slate #1E293B · Tech Cyan #0284C7
+   Emerald #10B981 · Amber #F59E0B
+   ───────────────────────────────────────────────────────────── */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-ink-950: #080d1a;
+  --color-ink-900: #0f172a;
+  --color-ink-850: #141d33;
+  --color-ink-800: #1e293b;
+  --color-ink-700: #334155;
+
+  --color-tech-200: #bae6fd;
+  --color-tech-300: #7dd3fc;
+  --color-tech-400: #38bdf8;
+  --color-tech-500: #0284c7;
+  --color-tech-600: #0369a1;
+  --color-tech-700: #075985;
+
+  --color-growth-300: #6ee7b7;
+  --color-growth-400: #34d399;
+  --color-growth-500: #10b981;
+  --color-growth-600: #047857;
+  --color-growth-700: #065f46;
+
+  --color-warn-300: #fcd34d;
+  --color-warn-400: #fbbf24;
+  --color-warn-500: #f59e0b;
+
+  --animate-fade-up: fade-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.25s ease-out both;
+  --animate-scale-in: scale-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-pulse-ring: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-flicker: flicker 2.4s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.5s linear infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.96) translateY(6px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  @keyframes pulse-ring {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+  @keyframes flicker {
+    0%, 100% { transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 4px rgb(245 158 11 / 0.5)); }
+    50% { transform: scale(1.08) rotate(-4deg); filter: drop-shadow(0 0 10px rgb(245 158 11 / 0.8)); }
+  }
+  @keyframes shimmer {
+    from { background-position: -200% 0; }
+    to { background-position: 200% 0; }
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    background: var(--color-ink-950);
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply min-h-dvh bg-ink-950 font-sans text-slate-200 antialiased;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+    background-image:
+      radial-gradient(60rem 40rem at 10% -10%, rgb(2 132 199 / 0.16), transparent 60%),
+      radial-gradient(50rem 35rem at 100% 0%, rgb(16 185 129 / 0.10), transparent 60%),
+      radial-gradient(40rem 30rem at 50% 120%, rgb(245 158 11 / 0.06), transparent 60%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgb(2 132 199 / 0.45);
+    color: white;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-tech-400);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Subtle dotted grid used behind hero surfaces */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgb(148 163 184 / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(148 163 184 / 0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+
+  .glass {
+    @apply border border-white/[0.07] bg-ink-850/70 backdrop-blur-xl;
+    box-shadow:
+      0 1px 0 0 rgb(255 255 255 / 0.04) inset,
+      0 20px 40px -24px rgb(0 0 0 / 0.6);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(100deg, var(--color-tech-300), var(--color-growth-300) 60%, var(--color-warn-300));
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-white/10 bg-ink-950/60 px-3.5 py-2.5 text-sm text-slate-100
+      placeholder:text-slate-500 transition-colors duration-150
+      hover:border-white/20 focus:border-tech-400 focus:outline-none focus:ring-2 focus:ring-tech-400/30;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-xs font-medium tracking-wide text-slate-400;
+  }
+
+  .kbd {
+    @apply rounded-md border border-white/10 bg-white/5 px-1.5 py-0.5 font-mono text-[10px] text-slate-400;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(148 163 184 / 0.25) transparent;
+  }
+}
+
+@utility safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
+}
