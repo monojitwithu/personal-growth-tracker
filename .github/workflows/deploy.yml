@@ -3,8 +3,6 @@ name: Deploy FullStack Ascent to GitHub Pages
 on:
   push:
     branches:
-      - main
-      - master
       - ultimate
   workflow_dispatch:
 
